@@ -1,0 +1,195 @@
+#buttons, #outcome, #results {
+  margin: auto;
+  text-align: center; }
+
+/*General setups for the whole page, default formating */
+*:not(ul):not(ol) {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Marcellus', serif;
+  color: rgba(0, 0, 0, 0.7); }
+
+p, h1, h2, h3, h4, h5, h6 {
+  cursor: default; }
+
+/* Background image */
+body {
+  background-image: url("../../../img/bg-rps.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+
+/* Header */
+header {
+  position: relative;
+  height: 50px;
+  border-bottom: 1px solid #77353d;
+  background-color: white; }
+  header #home-page {
+    height: 50px;
+    float: left; }
+  header #logo {
+    position: absolute;
+    height: 50px;
+    right: 0;
+    top: 0; }
+  header .header-text {
+    position: absolute;
+    padding-bottom: 2px;
+    bottom: 0;
+    left: 50px; }
+
+html {
+  height: 100%; }
+
+/* Buttons - Rock, Paper and Scissors */
+#buttons {
+  margin-top: 20px; }
+  #buttons button {
+    display: inline-block;
+    margin-right: -4px;
+    padding: 10px 20px;
+    border: solid 1px #8d9db7;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 10px; }
+
+/* Outcome box */
+#outcome {
+  height: 100px;
+  border: 2px solid black;
+  padding-left: 10px; }
+
+/* Current score */
+#results {
+  margin-bottom: 20px; }
+  #results p {
+    display: inline-block;
+    width: 120px; }
+    #results p #user, #results p #computer {
+      font-size: 23.4px;
+      font-weight: bold; }
+
+/* Modal - final score */
+#modalScore .modal-footer {
+  display: flex;
+  align-items: flex-end; }
+  #modalScore .modal-footer #btn-playAgain {
+    display: inline-block;
+    margin-right: -4px;
+    padding: 5px 10px;
+    border: solid 1px #8d9db7;
+    border-radius: 5px;
+    font-size: 18px;
+    font-size: 27px; }
+  #modalScore .modal-footer #btn-mainPage {
+    display: inline-block;
+    margin-right: -4px;
+    padding: 0.1px 0.1px;
+    border: solid 1px #8d9db7;
+    border-radius: 5px;
+    font-size: 18px; }
+    #modalScore .modal-footer #btn-mainPage a {
+      color: rgba(0, 0, 0, 0.7);
+      text-decoration: none;
+      padding: 5px 10px; }
+  #modalScore .modal-footer #btn-playAgain:hover, #modalScore .modal-footer #btn-mainPage:hover {
+    cursor: pointer;
+    border-color: #77353d; }
+
+/* Rules and history */
+#footer {
+  width: 75%;
+  margin: auto;
+  text-align: justify; }
+  #footer .strong {
+    text-decoration: underline; }
+  #footer span.win {
+    color: #21a806; }
+  #footer span.lose {
+    color: #ed1010; }
+
+/* Responsive design area */
+@media screen and (max-width: 444px), screen and (device-max-width: 444px) {
+  header .header-text {
+    font-size: 18px; }
+
+  #buttons h1 {
+    font-size: 21.6px; }
+  #buttons h2 {
+    font-size: 19.8px; }
+
+  #outcome {
+    width: 100%; }
+    #outcome h2 {
+      font-size: 23.4px; }
+
+  #text {
+    font-size: 14.4px; }
+
+  #results p:first-child {
+    margin-right: 10%; }
+
+  #footer {
+    height: 40vh;
+    overflow-y: scroll;
+    padding: 0 5px; }
+
+  #modalScore .modal-header h2 {
+    font-size: 27px; }
+  #modalScore .modal-body h4 {
+    font-size: 18px; } }
+@media screen and (min-width: 445px) and (max-width: 517px), screen and (device-min-width: 445px) and (device-max-width: 517px) {
+  header .header-text {
+    font-size: 30.6px; }
+
+  #buttons h1 {
+    font-size: 27px; }
+  #buttons h2 {
+    font-size: 23.4px; }
+
+  #outcome {
+    width: 100%; }
+
+  #results p:first-child {
+    margin-right: 20%; }
+
+  #footer {
+    height: 40vh;
+    overflow-y: scroll;
+    padding: 0 5px; } }
+@media screen and (min-width: 518px) and (max-width: 649px), screen and (device-min-width: 518px) and (device-max-width: 649px) {
+  header .header-text {
+    font-size: 36px; }
+
+  #buttons h1 {
+    font-size: 30.6px; }
+
+  #outcome {
+    width: 100%; }
+
+  #results p:first-child {
+    margin-right: 166.6666666667px; }
+
+  #footer {
+    height: 40vh;
+    overflow-y: scroll;
+    padding: 0 5px; } }
+@media screen and (min-width: 650px), screen and (device-min-width: 650px) {
+  header .header-text {
+    font-size: 36px; }
+
+  #buttons button:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #77353d; }
+
+  #outcome {
+    width: 500px; }
+
+  #results p:first-child {
+    margin-right: 166.6666666667px; } }
+
+/*# sourceMappingURL=game.css.map */

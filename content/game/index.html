@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rock, paper scissors</title>
+	<link rel="icon" type="image/png" href="../../img/LatvijaFF_noBG.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet"> <!-- font-family: 'Marcellus', serif; -->
+	<!-- Bootstrap CSS CDN link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!-- My CSS file -->
+	<link rel="stylesheet" type="text/css" href="CSS/game.css">
+</head>
+<body>
+
+	<header>
+		<a href="../../index.html"><img id="home-page" src="../../img/home.png" alt="main-page"></a>
+		<h2 class="header-text">&larr; Go to the Home Page</h2>
+		<img id="logo" src="../../img/LatvijaFF_noBG.png" alt="LatvijaFF-logo">
+	</header>
+
+	<div id="buttons">
+		<h1>Let's play some rock, paper, scissors</h1>
+		<h2>Make your choice</h2>
+		<button id="rock">Rock</button>
+		<button id="paper">Paper</button>
+		<button id="scissors">Scissors</button>
+	</div>
+
+	<div id="outcome">
+		<h2>Outcome:</h2>
+		<div id="text"></div>
+	</div>
+
+	<div id="results">
+		<p class="score">You: <span id="user"></span></p>
+		<p class="score">Computer: <span id="computer"></span></p>
+	</div>
+
+	<div id="footer">
+		<p><strong>Rules:</strong> Each player can choose either rock, paper or scissors (referred to as 'variants'). All players display their choice simultaneously and the outcome is determined by comparing these choices. The game has only two possible outcomes other than a tie: one player wins, and the other player loses. Each of the three choices has advantage only over one variant and is subsequent to another (the third variant is the same). Description of each variant goes as follows:</p>
+		<ul>
+			<li>Rock: beats <span class="win">scissors</span>, loses to <span class="lose">paper</span>;</li>
+			<li>Paper: beats <span class="win">rock</span>, loses to <span class="lose">scissors</span>;</li>
+			<li>Scissors: beat <span class="win">paper</span>, loses to <span class="lose">rock</span>.</li>
+		</ul>
+		<p>In case both players have chosen the same variant (e.g. both players chose scissors) the result is a tie because a variant cannot beat itself.</p>
+		<p><strong>How to win:</strong> For each round (one choice) a player is given one point if his or her variant beats a variant of an opponent. If the result is a tie, no one gets a point. For example, player one chose scissors and player two chose rock, one point will be given to the player two. The first player to reach <strong class="strong">10</strong> points wins the game.</p>
+	</div>
+
+	<!-- Final score is displayed here -->
+	<div id="modalScore" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2></h2>
+				</div>
+				<div class="modal-body">
+					<h4></h4>
+				</div>
+				<div class="modal-footer">
+					<button id="btn-playAgain" data-dismiss="modal">Play Again</button>
+					<button id="btn-mainPage"><a href="../../index.html">Go to Home Page</a></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- jQuery link -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- Bootstrap JavaScript link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- My JavaScript file -->
+<script type="text/javascript" src="JavaScript/game.js"></script>
+</body>
+</html>

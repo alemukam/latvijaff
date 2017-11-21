@@ -1,0 +1,592 @@
+#news-img-container button, #photo-container button {
+  position: absolute;
+  top: 40%;
+  width: 5%;
+  height: 40px; }
+  #news-img-container button:hover, #photo-container button:hover {
+    cursor: pointer; }
+#news-img-container .btn-previous, #photo-container .btn-previous {
+  left: 0; }
+#news-img-container .btn-next, #photo-container .btn-next {
+  right: 0; }
+
+/* 0.General setups for the whole page, default formating */
+*:not(ul):not(ol) {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Marcellus', serif;
+  color: rgba(0, 0, 0, 0.7); }
+
+p, h1, h2, h3, h4, h5, h6 {
+  cursor: default; }
+
+html {
+  background-image: url("../img/bg-main.jpg");
+  background-size: auto;
+  background-attachment: fixed; }
+
+body {
+  background-color: rgba(255, 255, 255, 0.8); }
+
+h1 {
+  font-size: 30px; }
+
+/* 1. Navigation container
+ 1.1. Main images */
+#main-navigation {
+  position: relative;
+  font-family: 'Berkshire Swash', cursive;
+  margin-bottom: 41.6px; }
+  #main-navigation ul, #main-navigation ol {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    #main-navigation ul li:hover, #main-navigation ol li:hover {
+      cursor: pointer; }
+    #main-navigation ul li a, #main-navigation ol li a {
+      color: rgba(0, 0, 0, 0.7);
+      text-decoration: none; }
+
+/* 1.3. Top-right corner menu */
+#top-menu li {
+  text-align: center; }
+  #top-menu li a {
+    background-color: white;
+    border: 1px solid #8d9db7; }
+
+/* 2. Main contents
+ 2.0. General setups for this part */
+.section {
+  width: 75%;
+  margin: 20px auto;
+  padding: 2.027027027%;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: justify; }
+  .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+    font-family: 'Kaushan Script', cursive; }
+  .section p {
+    line-height: 23.4px;
+    margin-top: 5px; }
+    .section p:first-letter {
+      font-size: 21.6px; }
+
+/* 2.1. First section - What is freestyle */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .flex-container .style-child {
+    flex-basis: 20%;
+    text-align: center;
+    margin: 0 auto; }
+    .flex-container .style-child .style-child-img-container {
+      overflow: hidden;
+      height: 200px;
+      width: 200px; }
+      .flex-container .style-child .style-child-img-container div {
+        height: 200px;
+        width: 200px;
+        background-image: url("../img/styles.jpg");
+        transition: transform 500ms ease-out; }
+        .flex-container .style-child .style-child-img-container div:hover {
+          transform: scale(1.05); }
+      .flex-container .style-child .style-child-img-container .photo-1 {
+        background-position: 0px 0; }
+      .flex-container .style-child .style-child-img-container .photo-2 {
+        background-position: -200px 0; }
+      .flex-container .style-child .style-child-img-container .photo-3 {
+        background-position: -400px 0; }
+      .flex-container .style-child .style-child-img-container .photo-4 {
+        background-position: -600px 0; }
+    .flex-container .style-child p:first-letter {
+      font-size: 18px; }
+
+/* 2.2. Second section - News */
+#news-img-container {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  /* Buttons */
+  /* Image of the news */ }
+  #news-img-container h1 {
+    text-align: center; }
+  #news-img-container img {
+    width: 90%;
+    margin-left: 5%;
+    clear: both; }
+
+/* 2.3. Third section - Communities */
+#community .com-logo-container {
+  margin: auto;
+  margin-top: 20px; }
+
+/* 2.4. Fourth section - about LatvijaFF */
+#team a {
+  color: #77353d;
+  font-weight: bold; }
+
+#photo-container {
+  margin-top: 20px;
+  background-color: white;
+  border: 5px solid #77353d;
+  position: relative; }
+  #photo-container .flex-container {
+    align-items: center;
+    width: 90%;
+    margin: auto; }
+
+/* 3. Footer */
+#copyright {
+  text-align: center; }
+
+@media screen and (max-width: 489px), screen and (device-max-width: 489px) {
+  html {
+    height: 100%; }
+
+  .section {
+    width: 90%;
+    height: 50vh;
+    overflow-y: scroll; }
+    .section h1 {
+      font-size: 25.2px;
+      text-align: center; }
+
+  /* Navigation */
+  #img-logo {
+    width: 30%;
+    margin-left: 35%; }
+
+  #img-landscape, #nav-text-container, #ul-socialMedia {
+    display: none; }
+
+  #top-menu {
+    width: 100%;
+    position: relative; }
+    #top-menu li {
+      width: 100%;
+      margin-bottom: 10px; }
+      #top-menu li:last-child {
+        margin-top: 20px; }
+      #top-menu li a {
+        font-size: 1.3em;
+        padding: 10px 30%; }
+
+  /* "News" section */
+  #news #news-img-container {
+    width: 95%; }
+    #news #news-img-container h1 {
+      width: 70%;
+      margin: auto; }
+  #news button {
+    top: 0;
+    width: 12%; }
+
+  /* "Main Partners" section */
+  #community {
+    width: 90%; }
+
+  /* "LatvijaFF" section */
+  #team button {
+    width: 12%; }
+
+  #photo-1, #photo-2 {
+    display: none; }
+
+  #photo-0 {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 0.5px solid #77353d;
+    background-image: url("../img/news.jpg");
+    background-size: 1800px; } }
+@media screen and (min-width: 490px) and (max-width: 639px), screen and (device-min-width: 490px) and (device-max-width: 639px) {
+  html {
+    height: 100%; }
+
+  /* Navigation */
+  #img-logo {
+    float: left;
+    width: 30%; }
+
+  #img-landscape {
+    display: none; }
+
+  #ul-socialMedia {
+    text-align: right; }
+    #ul-socialMedia li {
+      display: inline-block; }
+
+  #top-menu {
+    float: right;
+    width: 70%;
+    position: relative; }
+    #top-menu li {
+      margin-bottom: 20px; }
+      #top-menu li a {
+        font-size: 1.3em;
+        width: 100%;
+        padding: 0 30% 20px 40%; }
+
+  #nav-text-container {
+    float: right;
+    width: 70%;
+    text-align: center; }
+    #nav-text-container li {
+      margin-right: -5px;
+      display: inline-block;
+      padding: 5px 30px 10px 30px; }
+      #nav-text-container li:last-child {
+        border-right: none;
+        margin-right: 0; }
+      #nav-text-container li a {
+        font-size: 21.6px; }
+
+  /* "About" section */
+  #about {
+    clear: both; }
+
+  /* "LatvijaFF" section */
+  #photo-1, #photo-2 {
+    display: none; }
+
+  #photo-0 {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 0.5px solid #77353d;
+    background-image: url("../img/news.jpg");
+    background-size: 1800px; } }
+@media screen and (min-width: 640px) and (max-width: 799px), screen and (device-min-width: 640px) and (device-max-width: 799px) {
+  /* 1.0. Navigation */
+  #main-navigation li {
+    display: inline-block;
+    z-index: 2; }
+
+  #img-logo {
+    float: left;
+    width: 14.04%;
+    transform: scale(0.9);
+    transition: transform 1000ms ease-out; }
+    #img-logo:hover {
+      transform: scale(0.95); }
+
+  #img-landscape {
+    width: 85.96%; }
+
+  /* 1.2. Social megia logos */
+  #ul-socialMedia {
+    position: absolute;
+    left: 15.04%;
+    top: 2px; }
+
+  /* 1.3. Top-Menu */
+  #top-menu {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    #top-menu li {
+      margin-right: -5px;
+      padding-top: 32px; }
+      #top-menu li:last-child {
+        border-right: none;
+        margin-right: 0; }
+      #top-menu li a {
+        font-size: 27px;
+        padding: 30px 20px;
+        transition: color 0ms linear 300ms, box-shadow 300ms linear;
+        border-top-color: #ed1010;
+        border-top-width: 2px; }
+        #top-menu li a:hover {
+          box-shadow: 0 7px 2px -2px #ed1010 inset;
+          color: #ed1010; }
+
+  /* 1.4. Navigation text */
+  #nav-text-container {
+    clear: both;
+    position: absolute;
+    bottom: -1;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.5px solid #77353d; }
+    #nav-text-container li {
+      margin-right: -5px;
+      transition: box-shadow 300ms linear;
+      padding: 5px 30px 10px 30px; }
+      #nav-text-container li:last-child {
+        border-right: none;
+        margin-right: 0; }
+      #nav-text-container li a {
+        font-size: 21.6px; }
+      #nav-text-container li:hover {
+        cursor: default;
+        box-shadow: 0px -7px 2px -2px #77353d inset; }
+
+  /* "LatvijaFF" section */
+  #photo-2 {
+    display: none; }
+
+  #photo-0, #photo-1 {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 0.5px solid #77353d;
+    background-image: url("../img/news.jpg");
+    background-size: 1800px; } }
+@media screen and (min-width: 800px) and (max-width: 1081px), screen and (device-min-width: 800px) and (device-max-width: 1081px) {
+  /* 1.0. Navigation */
+  #main-navigation li {
+    display: inline-block;
+    z-index: 2; }
+
+  #img-logo {
+    float: left;
+    width: 14.04%;
+    transform: scale(0.9);
+    transition: transform 1000ms ease-out; }
+    #img-logo:hover {
+      transform: scale(0.95); }
+
+  #img-landscape {
+    width: 85.96%; }
+
+  /* 1.2. Social megia logos */
+  #ul-socialMedia {
+    position: absolute;
+    left: 15.04%;
+    top: 2px; }
+
+  /* 1.3. Top-Menu */
+  #top-menu {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    #top-menu li {
+      margin-right: -5px;
+      padding-top: 32px; }
+      #top-menu li:last-child {
+        border-right: none;
+        margin-right: 0; }
+      #top-menu li a {
+        font-size: 27px;
+        padding: 30px 20px;
+        transition: color 0ms linear 300ms, box-shadow 300ms linear;
+        border-top-color: #ed1010;
+        border-top-width: 2px; }
+        #top-menu li a:hover {
+          box-shadow: 0 7px 2px -2px #ed1010 inset;
+          color: #ed1010; }
+
+  /* 1.4. Navigation text */
+  #nav-text-container {
+    clear: both;
+    position: absolute;
+    bottom: -1;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.5px solid #77353d; }
+    #nav-text-container li {
+      margin-right: -5px;
+      transition: box-shadow 300ms linear;
+      padding: 5px 30px 10px 30px; }
+      #nav-text-container li:last-child {
+        border-right: none;
+        margin-right: 0; }
+      #nav-text-container li a {
+        font-size: 21.6px; }
+      #nav-text-container li:hover {
+        cursor: default;
+        box-shadow: 0px -7px 2px -2px #77353d inset; }
+
+  /* "Main Partners" Section */
+  /* "LatvijaFF" section */
+  #photo-0, #photo-2 {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    opacity: 0.6;
+    border: 0.5px solid #77353d;
+    background-image: url("../img/news.jpg");
+    background-size: 1350px; }
+
+  #photo-1 {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 0.5px solid #77353d;
+    background-image: url("../img/news.jpg");
+    background-size: 1800px; } }
+@media screen and (min-width: 1082px), screen and (device-min-width: 1082px) {
+  /* 1.0. Navigation */
+  #main-navigation li {
+    display: inline-block;
+    z-index: 2; }
+
+  #img-logo {
+    float: left;
+    width: 14.04%;
+    transform: scale(0.9);
+    transition: transform 1000ms ease-out; }
+    #img-logo:hover {
+      transform: scale(0.95); }
+
+  #img-landscape {
+    width: 85.96%; }
+
+  /* 1.2. Social megia logos */
+  #ul-socialMedia {
+    position: absolute;
+    left: 15.04%;
+    top: 2px; }
+
+  /* 1.3. Top-Menu */
+  #top-menu {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    #top-menu li {
+      margin-right: -5px;
+      padding-top: 32px; }
+      #top-menu li:last-child {
+        border-right: none;
+        margin-right: 0; }
+      #top-menu li a {
+        font-size: 27px;
+        padding: 30px 20px;
+        transition: color 0ms linear 300ms, box-shadow 300ms linear;
+        border-top-color: #ed1010;
+        border-top-width: 2px; }
+        #top-menu li a:hover {
+          box-shadow: 0 7px 2px -2px #ed1010 inset;
+          color: #ed1010; }
+
+  /* 1.4. Navigation text */
+  #nav-text-container {
+    clear: both;
+    position: absolute;
+    bottom: -1;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.5px solid #77353d; }
+    #nav-text-container li {
+      margin-right: -5px;
+      transition: box-shadow 300ms linear;
+      padding: 5px 30px 10px 30px; }
+      #nav-text-container li:last-child {
+        border-right: none;
+        margin-right: 0; }
+      #nav-text-container li a {
+        font-size: 21.6px; }
+      #nav-text-container li:hover {
+        cursor: default;
+        box-shadow: 0px -7px 2px -2px #77353d inset; }
+
+  /* "Main Partners" Section */
+  #community .com-logo-container {
+    width: 800px;
+    /* Specifications for the each community */
+    /* Default setupts for the hover over logos */ }
+    #community .com-logo-container .federation {
+      height: 278.4px;
+      width: 40%;
+      float: left;
+      background-image: url("../img/communities.jpg");
+      background-size: 800px;
+      background-position: 0 0; }
+    #community .com-logo-container .tek-neek {
+      height: 278.4px;
+      width: 60%;
+      float: right;
+      background-image: url("../img/communities.jpg");
+      background-size: 800px;
+      background-position: -320px 0; }
+    #community .com-logo-container .for-freestyle {
+      height: 150.4px;
+      clear: both;
+      text-align: left;
+      background-image: url("../img/communities.jpg");
+      background-size: 800px;
+      background-position: 0 -278.4px; }
+      #community .com-logo-container .for-freestyle p {
+        width: 0;
+        height: 100%;
+        transition: width 300ms linear; }
+      #community .com-logo-container .for-freestyle:hover p {
+        width: 40%; }
+      #community .com-logo-container .for-freestyle p {
+        right: -10%; }
+      #community .com-logo-container .for-freestyle:hover p {
+        right: 0; }
+    #community .com-logo-container .lff {
+      height: 278.4px;
+      width: 50%;
+      float: left;
+      background-image: url("../img/communities.jpg");
+      background-size: 800px;
+      background-position: 0 -428.8px; }
+    #community .com-logo-container .swrl {
+      height: 278.4px;
+      width: 50%;
+      float: right;
+      background-image: url("../img/communities.jpg");
+      background-size: 800px;
+      background-position: -400px -428.8px; }
+    #community .com-logo-container .adidas {
+      height: 150.4px;
+      clear: both;
+      text-align: right;
+      background-image: url("../img/communities.jpg");
+      background-size: 800px;
+      background-position: 0 -707.2px; }
+      #community .com-logo-container .adidas p {
+        width: 0;
+        height: 100%;
+        transition: width 300ms linear; }
+      #community .com-logo-container .adidas:hover p {
+        width: 40%; }
+      #community .com-logo-container .adidas p {
+        left: -20%; }
+      #community .com-logo-container .adidas:hover p {
+        left: 0; }
+    #community .com-logo-container .logo, #community .com-logo-container .for-freestyle, #community .com-logo-container .adidas {
+      position: relative;
+      overflow: hidden; }
+      #community .com-logo-container .logo p, #community .com-logo-container .for-freestyle p, #community .com-logo-container .adidas p {
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        background-color: rgba(119, 53, 61, 0.9);
+        color: white;
+        padding: 0 5%; }
+        #community .com-logo-container .logo p strong, #community .com-logo-container .for-freestyle p strong, #community .com-logo-container .adidas p strong {
+          border-bottom: solid white 1px;
+          padding: 0 15px; }
+    #community .com-logo-container .logo {
+      text-align: center; }
+      #community .com-logo-container .logo p {
+        width: 90%;
+        height: 0;
+        transition: height 300ms linear; }
+      #community .com-logo-container .logo:hover p {
+        height: 50%; }
+
+  /* "LatvijaFF" section */
+  #photo-0, #photo-2 {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    opacity: 0.6;
+    border: 0.5px solid #77353d;
+    background-image: url("../img/news.jpg");
+    background-size: 1350px; }
+
+  #photo-1 {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 0.5px solid #77353d;
+    background-image: url("../img/news.jpg");
+    background-size: 1800px; } }
+
+/*# sourceMappingURL=main.css.map */
